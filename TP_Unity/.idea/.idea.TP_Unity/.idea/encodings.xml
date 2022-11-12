@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/AI/AISense.cs" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/AI/AISenseSight.cs" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Assets/X. Imported Asset/Cours IA/State Machine/FSMState.cs" charset="windows-1252" />
+  </component>
+</project>

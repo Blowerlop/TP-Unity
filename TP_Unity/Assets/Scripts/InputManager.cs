@@ -10,9 +10,13 @@ public class InputManager : MonoBehaviour
 
     public Vector2 move;
     public Vector2 look;
+    public bool isRunning;
+    public bool isJumping;
+    public bool isUsing;
 
     #endregion
 
+    
     #region Updates
     public void Awake()
     {
@@ -31,6 +35,22 @@ public class InputManager : MonoBehaviour
     public void OnLook(InputValue inputValue)
     {
         look = inputValue.Get<Vector2>();
+        look.y *= -1;
+    }
+
+    public void OnRun(InputValue inputValue)
+    {
+        isRunning = inputValue.isPressed;
+    }
+
+    public void OnJump(InputValue inputValue)
+    {
+        isJumping = inputValue.isPressed;
+    }
+
+    public void OnUsing()
+    {
+        isUsing = true;
     }
 
     #endregion
