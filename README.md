@@ -42,7 +42,7 @@ Projet encore améliorable mais non fini du fait de la courte durée de producti
 
   - [Synty Studio] pour l'environnement
   - [Adobe Mixamo] pour les animations
-  - [Nguyen Quoc-Bao] [Github](https://github.com/Baokebab) pour son template github
+  - [Nguyen Quoc-Bao] [Github](https://github.com/Baokebab) pour son template de README
 
 
 Fait par Girod Nathan
