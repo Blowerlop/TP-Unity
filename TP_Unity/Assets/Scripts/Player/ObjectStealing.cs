@@ -16,15 +16,13 @@ public class ObjectStealing : MonoBehaviour
     [SerializeField] private GameObject _UI;
 
     [SerializeField] private IKBehaviour _ikBehaviour;
-    [SerializeField] private GameObject _character;
-
-    private GameObject _target;
 
     private void Awake()
     {
         _cameraTransform = Camera.main.transform;
         _noiseStatus = GetComponent<NoiseStatus>();
     }
+
 
     private void Update()
     {
@@ -33,17 +31,12 @@ public class ObjectStealing : MonoBehaviour
             UIEnabled(true);
             if (InputManager.instance.isUsing)
             {
-                _character.SetActive(true);
-                
-                StartCoroutine(MakeSound());
-                _target = hit.transform.gameObject;
-                AudioManager.instance.PlaySound(_stealSound);
                 UIEnabled(false);
+                Steal(hit.transform.gameObject);
             }
         }
         else
         {
-            _target = null;
             UIEnabled(false);
         }
         
@@ -52,7 +45,6 @@ public class ObjectStealing : MonoBehaviour
 
     private IEnumerator MakeSound()
     {
-        Debug.Log("Start Corountine");
         _noiseStatus.NoiseLevel = 1;
         yield return new WaitForSeconds(0.1f);
         _noiseStatus.NoiseLevel =0;
@@ -65,6 +57,8 @@ public class ObjectStealing : MonoBehaviour
 
     public void Steal(GameObject target)
     {
+        StartCoroutine(MakeSound());
+        AudioManager.instance.PlaySound(_stealSound);
         Destroy(target);
     }
     

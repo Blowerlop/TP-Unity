@@ -166,5 +166,12 @@ public class PlayerController : MonoBehaviour
     {
         //Debug.Log("Collide");
     }
+
+    private void HeadBobing()
+    {
+
+    }
+
+    
     #endregion
 }

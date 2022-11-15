@@ -52,13 +52,11 @@ public class IG1EnemyController : AgentController
             Debug.Log("Objet " + evt + " ouï en " + sti.position);
             _stateManager.SwitchState(_stateManager.pursuitState);
         }
-        else if (evt == AISense<HearingStimulus>.Status.Leave)
+        else if(evt == AISense<HearingStimulus>.Status.Leave)
         {
-            if (Vector3.Distance(_stateManager.transform.position, _stateManager.navMeshAgent.destination) <= 1f)
-            {
-                //_stateManager.SwitchState(_stateManager.patrolState); ///// A modifier
-            }
+
         }
+        
             
         _stateManager.pursuitState.targetPostion = sti.position;
 
