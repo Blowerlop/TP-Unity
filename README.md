@@ -8,7 +8,7 @@ Les éléments demandés sont : Contrôleur, Caméra, Animations, IA, Environnem
 
 ## Installation
 
-Télécharger le repo entier puis ouvrez le fichier "ICI POUR JOUER" et lancez "TP_UNITY.exe"
+Téléchargez le repo entier puis ouvrez le fichier "ICI POUR JOUER" et lancez "TP_UNITY.exe"
 
 ## Contrôles
 
